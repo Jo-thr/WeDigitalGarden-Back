@@ -1,0 +1,16 @@
+@import "~froala-editor/css/froala_editor.pkgd.min.css";
+@import "~froala-editor/css/froala_style.min.css";
+
+// Plugins
+@import "~froala-editor/css/third_party/embedly.min.css";
+@import "~froala-editor/css/third_party/spell_checker.css";
+@import "~froala-editor/css/third_party/image_tui.min.css";
+
+.fr-view-modal {
+  width: 75vw;
+}
+
+.fr-view-modal__content {
+  max-height: 80vh;
+  overflow-y: scroll;
+}

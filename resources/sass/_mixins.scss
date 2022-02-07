@@ -1,0 +1,56 @@
+@import "variables";
+
+/* smartphone tablet and desktop mixins help to write media queries */
+@mixin smartphone {
+    @media (max-width: #{$smartphone-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-small-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin small-desktop {
+    @media (min-width: #{$desktop-small-width}) and (max-width: #{$desktop-large-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media (min-width: #{$desktop-large-width}) {
+        @content;
+    }
+}
+
+@mixin fontSize {
+    .font-size-56 {
+        font-size: 56px;
+        line-height: 64px;
+    }
+    .font-size-48 {
+        font-size: 48px;
+        line-height: 58px;
+    }
+    .font-size-32 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .font-size-20 {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .font-size-16 {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .font-size-14 {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+}
+
+@include fontSize;
